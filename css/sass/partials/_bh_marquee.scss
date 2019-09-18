@@ -1,0 +1,36 @@
+  .marquee {
+    background-image: url('/assets/images/Marquee.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    h1,
+    h3 {
+      text-align: center;
+      color: #fff;
+    }
+    .ctabox {
+      text-align: center;
+      margin-top: 20px;
+      .btn {
+        color: #fff;
+        font-size: 21px;
+        font-weight: 600;
+        padding: 12px 38px;
+        border: 0;
+        border-radius: 24px;
+        margin: 0 10px;
+        &.feedback {
+          background-color: $rtcgreen;
+        }
+        &.lernmoar {
+          background-color: $rtcblue;
+        }
+      }
+    }
+  }

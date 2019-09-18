@@ -1,0 +1,21 @@
+.sect4 {
+  background: linear-gradient(180deg, #EE3747 0.04%, #800043 100%);
+  position: relative;
+  .sect_text {
+    width: 82%;
+    color: #fff;
+    margin: 50px auto 30px;
+    .subtitleblock {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      h2,
+      h4 {
+        margin-bottom: 0
+      }
+    }
+  }
+  .demo {
+    background-image: url('/assets/images/phase2.jpg');
+  }
+}

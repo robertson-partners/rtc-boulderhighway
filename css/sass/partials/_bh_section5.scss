@@ -1,0 +1,38 @@
+.sect5 {
+  position: relative;
+  padding-bottom: 60px;
+  .sect_text {
+    width: 82%;
+    margin: 50px auto 60px;
+    text-align: center;
+    h2 {
+      color: $rtcblue;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+    p {
+      font-size: 18px;
+      font-weight: 500;
+      strong {
+        color: $rtcblue;
+      }
+    }
+  }
+  .formblock {
+    display: flex;
+    margin: auto;
+    width: 82%;
+    .formtext {
+      width: 40%;
+      padding: 0 20px;
+      h6 {
+        font-size: 22px;
+        line-height: 22px;
+        margin: 0 0 26px;
+      }
+      strong {
+        font-weight: 500;
+      }
+    }
+  }
+}

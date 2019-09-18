@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const log = require('fancy-log');
 const c = require('ansi-colors');
 const sass = require('gulp-sass');
-const imagemin = require('imagemin');
+const tinypng = require('gulp-tinypng-compress');
 const jshint = require('gulp-jshint');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
@@ -98,7 +98,12 @@ gulp.task('styles', function() {
 // Optimize images, move into assets directory
 gulp.task('images', function() {
   return gulp.src(SOURCE.images)
-    .pipe(imagemin())
+    .pipe(tinypng({
+      key: 'nHSrJGR177MzsLJFxhsdqDyN5ccXjcSN',
+      sigFile: 'assets/images/.tinypng-sigs',
+      log: true,
+      summarize: true
+    }))
     .pipe(gulp.dest(ASSETS.images))
 });
 

@@ -1,0 +1,18 @@
+.sect1 {
+  background: linear-gradient(180deg, #F26D26 0%, #EE3747 100%);
+  position: relative;
+  .recap {
+    width: 82%;
+    color: #fff;
+    margin: 50px auto 65px;
+  }
+  .map {
+    padding-bottom: 56.25%;
+    width: 100%;
+    background-image: url('/assets/images/map1_masked.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+}

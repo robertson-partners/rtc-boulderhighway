@@ -1,0 +1,62 @@
+body {
+  font-family: $global-font-family;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+h1 {
+  font-size: 100px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 36px;
+  font-weight: 300;
+  margin-top: 0;
+}
+
+h4 {
+  font-size: 21px;
+  font-weight: 600;
+  margin-top: 0;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 28px
+}
+
+.main {
+  display: block;
+  position: relative;
+  overflow: auto;
+  height: 100%;
+  width: 100%;
+}
+
+.section {
+  display: block;
+  position: relative;
+  overflow: auto;
+  width: 100%;
+  .demo {
+    width: 82%;
+    padding-bottom: 56%;
+    border: 3px solid #fff;
+    margin: 0 auto 45px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
