@@ -1,0 +1,27 @@
+{
+  "name": "rtc-boulderhighway",
+  "version": "1.0.0",
+  "description": "Microsite for Boulder Highway Project - RTC",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robertson-partners/rtc-boulderhighway.git"
+  },
+  "keywords": [
+    "JS",
+    "SASS",
+    "HTML"
+  ],
+  "author": "Tom Madrid",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/robertson-partners/rtc-boulderhighway/issues"
+  },
+  "homepage": "https://github.com/robertson-partners/rtc-boulderhighway#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
