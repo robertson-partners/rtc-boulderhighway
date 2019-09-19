@@ -23,6 +23,19 @@ $(function() {
     $('#' + getDetail).fadeIn(200);
   });
 
+  $(window).scroll(function(e) {
+    var scroll = $(window).scrollTop();
+    var opVal = (scroll > 150) ? 0.25 : (1.5 - scroll / 100);
+    $('#top_logo').css('opacity', opVal);
+    $('#lownav').css('opacity', opVal);
+  });
+
+  $('#lownav').hover(function() {
+    $('#lownav').animate({ opacity: 1 }, 200);
+  }, function() {
+    $('#lownav').animate({ opacity: 0.25 }, 200);
+  });
+
 
 
 });

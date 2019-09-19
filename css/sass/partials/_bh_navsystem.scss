@@ -44,6 +44,7 @@
     position: absolute;
     bottom: 0;
     padding: 40px 0 20px;
+    pointer-events: all;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 100%);
     @media screen and (max-width: $break-medium) {
       display: none;
