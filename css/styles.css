@@ -72,8 +72,7 @@ of your Sass files so they can compile into one CSS file.
 body {
   font-family: "RTCRaleway", sans-serif;
   height: 100%;
-  width: 100%;
-  position: absolute; }
+  width: 100%; }
 
 h1 {
   font-size: 100px;
@@ -81,6 +80,9 @@ h1 {
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 10px; }
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 9vw; } }
 
 h2 {
   font-size: 48px;
@@ -105,7 +107,6 @@ p {
 .main {
   display: block;
   position: relative;
-  overflow: auto;
   height: 100%;
   width: 100%; }
 
@@ -121,7 +122,11 @@ p {
     margin: 0 auto 45px;
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover; }
+    background-size: cover;
+    position: relative; }
+    @media screen and (max-width: 768px) {
+      .section .demo {
+        width: 90%; } }
 
 .nav-overlay {
   display: block;
@@ -130,23 +135,53 @@ p {
   z-index: 10;
   width: 100%;
   height: 100%; }
-  .nav-overlay .logo {
-    background-image: url("/assets/images/reimagine-logo.png");
-    background-repeat: no-repeat;
-    -webkit-filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.25));
-    filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.25));
+  .nav-overlay .topbox {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     position: relative;
-    top: 20px;
-    left: 40px;
-    width: 239px;
-    height: 76px; }
+    z-index: 11; }
+    .nav-overlay .topbox .logo {
+      background-image: url("./../assets/images/reimagine-logo.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      -webkit-filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.25));
+      filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.25));
+      position: relative;
+      top: 20px;
+      left: 40px;
+      width: 239px;
+      height: 76px; }
+      @media screen and (max-width: 768px) {
+        .nav-overlay .topbox .logo {
+          width: 150px;
+          left: 10px;
+          top: 10px; } }
+  .nav-overlay .mnav {
+    display: none; }
+    @media screen and (max-width: 768px) {
+      .nav-overlay .mnav {
+        display: block;
+        font-size: 2.5rem;
+        padding: 10px 20px; }
+        .nav-overlay .mnav a {
+          pointer-events: all;
+          color: #fff; } }
   .nav-overlay .nav {
     width: 100%;
     position: absolute;
     bottom: 0;
     padding: 40px 0 20px;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.75)));
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%); }
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.85)));
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 100%); }
+    @media screen and (max-width: 768px) {
+      .nav-overlay .nav {
+        display: none; } }
     .nav-overlay .nav ul {
       display: -webkit-box;
       display: -webkit-flex;
@@ -157,7 +192,6 @@ p {
       -ms-flex-pack: justify;
       justify-content: space-between;
       list-style-type: none;
-      color: #fff;
       margin: 0 auto;
       width: 82%; }
       .nav-overlay .nav ul li {
@@ -173,9 +207,47 @@ p {
         -webkit-align-items: flex-end;
         -ms-flex-align: end;
         align-items: flex-end; }
+        .nav-overlay .nav ul li a {
+          color: #fff;
+          text-decoration: none;
+          pointer-events: all; }
+  .nav-overlay .mnav_overlay {
+    position: absolute;
+    z-index: 9;
+    display: none;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85); }
+    .nav-overlay .mnav_overlay ul {
+      margin: 0;
+      padding: 0;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      list-style-type: none;
+      height: 100%;
+      -webkit-box-pack: space-evenly;
+      -webkit-justify-content: space-evenly;
+      -ms-flex-pack: space-evenly;
+      justify-content: space-evenly; }
+      .nav-overlay .mnav_overlay ul li {
+        text-align: center; }
+        .nav-overlay .mnav_overlay ul li a {
+          color: #fff;
+          text-decoration: none;
+          font-size: 24px;
+          font-weight: 600;
+          pointer-events: all; }
 
 .marquee {
-  background-image: url("/assets/images/Marquee.png");
+  background-image: url("./../assets/images/Marquee.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -193,9 +265,11 @@ p {
   -ms-flex-pack: center;
   justify-content: center;
   position: relative;
-  height: 100%;
+  height: 100vh;
   width: 100%; }
-  .marquee h1,
+  .marquee h1 {
+    text-align: center;
+    color: #fff; }
   .marquee h3 {
     text-align: center;
     color: #fff; }
@@ -210,6 +284,9 @@ p {
       border: 0;
       border-radius: 24px;
       margin: 0 10px; }
+      @media screen and (max-width: 768px) {
+        .marquee .ctabox .btn {
+          margin-bottom: 20px; } }
       .marquee .ctabox .btn.feedback {
         background-color: #92B13E; }
       .marquee .ctabox .btn.lernmoar {
@@ -226,7 +303,7 @@ p {
   .sect1 .map {
     padding-bottom: 56.25%;
     width: 100%;
-    background-image: url("/assets/images/map1_masked.png");
+    background-image: url("./../assets/images/map1_masked.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -256,8 +333,20 @@ p {
       .sect2 .sect_text .subtitleblock h2,
       .sect2 .sect_text .subtitleblock h4 {
         margin-bottom: 0; }
+    @media screen and (max-width: 768px) {
+      .sect2 .sect_text {
+        width: 90%; }
+        .sect2 .sect_text .subtitleblock {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column; }
+          .sect2 .sect_text .subtitleblock h2 {
+            font-size: 9vw;
+            margin-bottom: 6px; } }
   .sect2 .demo {
-    background-image: url("/assets/images/early_action_items.jpg"); }
+    background-image: url("./../assets/images/early_action_items.jpg"); }
 
 .sect3 {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.04%, #EE3747), to(#800043));
@@ -283,8 +372,20 @@ p {
       .sect3 .sect_text .subtitleblock h2,
       .sect3 .sect_text .subtitleblock h4 {
         margin-bottom: 0; }
+    @media screen and (max-width: 768px) {
+      .sect3 .sect_text {
+        width: 90%; }
+        .sect3 .sect_text .subtitleblock {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column; }
+          .sect3 .sect_text .subtitleblock h2 {
+            font-size: 9vw;
+            margin-bottom: 6px; } }
   .sect3 .demo {
-    background-image: url("/assets/images/phase1.jpg"); }
+    background-image: url("./../assets/images/phase1.jpg"); }
 
 .sect4 {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.04%, #EE3747), to(#800043));
@@ -310,8 +411,20 @@ p {
       .sect4 .sect_text .subtitleblock h2,
       .sect4 .sect_text .subtitleblock h4 {
         margin-bottom: 0; }
+    @media screen and (max-width: 768px) {
+      .sect4 .sect_text {
+        width: 90%; }
+        .sect4 .sect_text .subtitleblock {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column; }
+          .sect4 .sect_text .subtitleblock h2 {
+            font-size: 9vw;
+            margin-bottom: 6px; } }
   .sect4 .demo {
-    background-image: url("/assets/images/phase2.jpg"); }
+    background-image: url("./../assets/images/phase2.jpg"); }
 
 .sect5 {
   position: relative;
@@ -329,6 +442,18 @@ p {
       font-weight: 500; }
       .sect5 .sect_text p strong {
         color: #1D427F; }
+    @media screen and (max-width: 768px) {
+      .sect5 .sect_text {
+        width: 90%; }
+        .sect5 .sect_text .subtitleblock {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column; }
+          .sect5 .sect_text .subtitleblock h2 {
+            font-size: 9vw;
+            margin-bottom: 6px; } }
   .sect5 .formblock {
     display: -webkit-box;
     display: -webkit-flex;
@@ -336,6 +461,16 @@ p {
     display: flex;
     margin: auto;
     width: 82%; }
+    @media screen and (max-width: 768px) {
+      .sect5 .formblock {
+        width: 90%; } }
+    @media screen and (max-width: 767px) {
+      .sect5 .formblock {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column; } }
     .sect5 .formblock .formtext {
       width: 40%;
       padding: 0 20px; }
@@ -345,13 +480,20 @@ p {
         margin: 0 0 26px; }
       .sect5 .formblock .formtext strong {
         font-weight: 500; }
+      @media screen and (max-width: 767px) {
+        .sect5 .formblock .formtext {
+          width: 90%; } }
 
 .highlights {
   position: absolute;
   width: 44px;
   height: 44px;
   z-index: 9;
-  cursor: pointer; }
+  cursor: pointer;
+  /* PROJECT RECAP */
+  /* EARLY ACTION ITEMS */
+  /* PHASE 1 */
+  /* PHASE 2 */ }
   .highlights::before {
     content: '';
     position: relative;
@@ -407,6 +549,42 @@ p {
   .highlights.option-lps {
     top: 76%;
     left: 40%; }
+  .highlights.option-tmp {
+    top: 32%;
+    left: 47.5%; }
+  .highlights.option-ils {
+    top: 74%;
+    left: 19.75%; }
+  .highlights.option-mml {
+    top: 85%;
+    left: 72%; }
+  .highlights.option-il2 {
+    top: 30%;
+    left: 63%; }
+  .highlights.option-lnp {
+    top: 33%;
+    left: 35.5%; }
+  .highlights.option-sdw {
+    top: 44%;
+    left: 69%; }
+  .highlights.option-mbx {
+    top: 54%;
+    left: 46%; }
+  .highlights.option-axl {
+    top: 80%;
+    left: 66%; }
+  .highlights.option-dcy {
+    top: 40%;
+    left: 30.4%; }
+  .highlights.option-lip {
+    top: 75%;
+    left: 29%; }
+  .highlights.option-crb {
+    top: 52%;
+    left: 46.8%; }
+  .highlights.option-acc {
+    top: 69%;
+    left: 64%; }
 
 @-webkit-keyframes pulse-ring {
   0% {
@@ -446,6 +624,106 @@ p {
     -webkit-transform: scale(0.9);
     transform: scale(0.9); } }
 
+.details {
+  display: none;
+  position: absolute;
+  z-index: 20;
+  background: #fff;
+  border: 7px solid #1D427F;
+  border-radius: 25px;
+  padding: 6px;
+  max-width: 114px;
+  text-align: center; }
+  .details p {
+    margin: 0 0 5px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: center;
+    color: #1D427F; }
+  .details.alt {
+    max-width: 250px; }
+
+/* PROJECT RECAP */
+#crt {
+  top: 10%;
+  left: 47%; }
+
+#sws {
+  top: 21%;
+  left: 21%; }
+
+#mbc {
+  top: 22%;
+  left: 65%; }
+
+#stl {
+  top: 47%;
+  left: 67%; }
+
+#dct {
+  top: 57%;
+  left: 32%; }
+
+#als {
+  top: 39%;
+  left: 32%; }
+
+#lps {
+  top: 72%;
+  left: 43.5%; }
+
+/* EARLY ACTION ITEMS */
+#tmp {
+  top: 39%;
+  left: 37.5%; }
+
+#ils {
+  top: 58%;
+  left: 23.5%; }
+
+#mml {
+  top: 70%;
+  left: 48.5%; }
+
+/* PHASE 1 */
+#il2 {
+  top: 10%;
+  left: 44%; }
+
+#lnp {
+  top: 11%;
+  left: 13%; }
+
+#sdw {
+  top: 50%;
+  left: 58%; }
+
+#mbx {
+  top: 50%;
+  left: 22%; }
+
+#axl {
+  top: 62%;
+  left: 42.5%; }
+
+/* PHASE 2 */
+#dcy {
+  top: 18%;
+  left: 34%; }
+
+#lip {
+  top: 61%;
+  left: 33%; }
+
+#crb {
+  top: 30%;
+  left: 40%; }
+
+#acc {
+  top: 47%;
+  left: 57%; }
+
 #_form_1_ {
   font-size: 14px;
   width: 60%;
@@ -463,6 +741,13 @@ p {
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between; }
+    @media screen and (max-width: 768px) {
+      #_form_1_ .halfblocks {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column; } }
 
 ._form_hide {
   display: none;
@@ -494,6 +779,12 @@ p {
   box-sizing: border-box;
   height: 50px;
   border: 1px solid #D4D4D4; }
+
+#_form_1_ textarea {
+  height: 100px; }
+  @media screen and (max-width: 768px) {
+    #_form_1_ textarea {
+      height: 200px; } }
 
 #_form_1_ textarea {
   resize: none; }
@@ -617,6 +908,9 @@ p {
 
 #_form_1_ ._half_width {
   width: 48%; }
+  @media screen and (max-width: 768px) {
+    #_form_1_ ._half_width {
+      width: 100% !important; } }
 
 #_form_1_ ._form_full_field {
   display: block;
@@ -828,3 +1122,38 @@ p {
   #_form_1_._inline-form._inline-style ._inline-style._button-wrapper {
     margin-top: 20px !important;
     margin-left: 0 !important; } }
+
+.footer {
+  background: -webkit-gradient(linear, left top, left bottom, from(#033F81), to(#91B037));
+  background: linear-gradient(180deg, #033F81 0%, #91B037 100%);
+  padding: 60px 0; }
+  .footer .footbox {
+    width: 82%;
+    margin: 0 auto 50px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    @media screen and (max-width: 768px) {
+      .footer .footbox {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column; }
+        .footer .footbox .logo {
+          margin-bottom: 40px; } }
+  .footer .copyright {
+    width: 82%;
+    margin: auto;
+    color: #fff; }
+    .footer .copyright a {
+      color: #fff;
+      font-weight: 500; }
+    @media screen and (max-width: 767px) {
+      .footer .copyright p {
+        font-size: 14px; } }

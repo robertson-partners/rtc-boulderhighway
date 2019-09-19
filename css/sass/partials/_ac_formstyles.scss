@@ -10,6 +10,9 @@
   .halfblocks {
     display: flex;
     justify-content: space-between;
+    @media screen and (max-width: $break-medium) {
+      flex-direction: column;
+    }
   }
 }
 
@@ -50,6 +53,13 @@
   box-sizing: border-box;
   height: 50px;
   border: 1px solid #D4D4D4;
+}
+
+#_form_1_ textarea {
+  height: 100px;
+  @media screen and (max-width: $break-medium) {
+    height: 200px;
+  }
 }
 
 #_form_1_ textarea {
@@ -199,6 +209,9 @@
 
 #_form_1_ ._half_width {
   width: 48%;
+  @media screen and (max-width: $break-medium) {
+    width: 100% !important;
+  }
 }
 
 #_form_1_ ._form_full_field {

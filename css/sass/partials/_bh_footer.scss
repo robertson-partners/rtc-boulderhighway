@@ -1,0 +1,30 @@
+.footer {
+  background: linear-gradient(180deg, #033F81 0%, #91B037 100%);
+  padding: 60px 0;
+  .footbox {
+    width: 82%;
+    margin: 0 auto 50px;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: $break-medium) {
+      flex-direction: column;
+      .logo {
+        margin-bottom: 40px;
+      }
+    }
+  }
+  .copyright {
+    width: 82%;
+    margin: auto;
+    color: #fff;
+    a {
+      color: #fff;
+      font-weight: 500;
+    }
+    @media screen and (max-width: $break-small) {
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}

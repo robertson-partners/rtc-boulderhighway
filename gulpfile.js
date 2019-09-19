@@ -2,7 +2,9 @@ const gulp = require('gulp');
 const log = require('fancy-log');
 const c = require('ansi-colors');
 const sass = require('gulp-sass');
+const babel = require('gulp-babel');
 const tinypng = require('gulp-tinypng-compress');
+const filter = require('gulp-filter');
 const jshint = require('gulp-jshint');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
@@ -58,12 +60,12 @@ gulp.task('scripts', function() {
   console.log(SOURCE.scripts);
 
   return gulp.src(SOURCE.scripts)
-    .pipe(plugin.plumber(function(error) {
+    .pipe(plumber(function(error) {
       log(c.red(error.message));
       this.emit('end');
     }))
-    .pipe(plugin.sourcemaps.init())
-    .pipe(plugin.babel({
+    .pipe(sourcemaps.init())
+    .pipe(babel({
       presets: ["@babel/preset-env"],
       compact: true,
       ignore: ['what-input.js', 'what-input.min.js']

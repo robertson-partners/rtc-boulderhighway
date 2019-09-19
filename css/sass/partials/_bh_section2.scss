@@ -14,8 +14,18 @@
         margin-bottom: 0
       }
     }
+    @media screen and (max-width: $break-medium) {
+      width: 90%;
+      .subtitleblock {
+        h2 {
+          font-size: 9vw;
+          margin-bottom: 6px;
+        }
+        flex-direction: column;
+      }
+    }
   }
   .demo {
-    background-image: url('/assets/images/early_action_items.jpg');
+    background-image: url('./../assets/images/early_action_items.jpg');
   }
 }

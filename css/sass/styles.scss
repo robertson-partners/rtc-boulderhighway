@@ -21,8 +21,9 @@ of your Sass files so they can compile into one CSS file.
 @import "partials/bh_section5";
 // COMPONENTS
 @import "partials/bh_highlights";
+@import "partials/bh_details";
 @import "partials/ac_formstyles";
 // PRE-FOOTER, FOOTER
-//@import "partials/bh_footer";
+@import "partials/bh_footer";
 // OVERRIDES
 //@import "overrides";

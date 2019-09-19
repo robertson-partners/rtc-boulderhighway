@@ -40,6 +40,7 @@
     text-align: center;
     line-height: 44px;
   }
+  /* PROJECT RECAP */
   &.option-crt {
     top: 27%;
     left: 45%;
@@ -67,6 +68,57 @@
   &.option-lps {
     top: 76%;
     left: 40%;
+  }
+  /* EARLY ACTION ITEMS */
+  &.option-tmp {
+    top: 32%;
+    left: 47.5%;
+  }
+  &.option-ils {
+    top: 74%;
+    left: 19.75%;
+  }
+  &.option-mml {
+    top: 85%;
+    left: 72%;
+  }
+  /* PHASE 1 */
+  &.option-il2 {
+    top: 30%;
+    left: 63%;
+  }
+  &.option-lnp {
+    top: 33%;
+    left: 35.5%;
+  }
+  &.option-sdw {
+    top: 44%;
+    left: 69%;
+  }
+  &.option-mbx {
+    top: 54%;
+    left: 46%;
+  }
+  &.option-axl {
+    top: 80%;
+    left: 66%;
+  }
+  /* PHASE 2 */
+  &.option-dcy {
+    top: 40%;
+    left: 30.4%;
+  }
+  &.option-lip {
+    top: 75%;
+    left: 29%;
+  }
+  &.option-crb {
+    top: 52%;
+    left: 46.8%;
+  }
+  &.option-acc {
+    top: 69%;
+    left: 64%;
   }
 }
 

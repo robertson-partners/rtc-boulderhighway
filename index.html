@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.2/css/all.css" integrity="sha384-XxNLWSzCxOe/CFcHcAiJAZ7LarLmw3f4975gOO6QkxvULbGGNDoSOTzItGUG++Q+" crossorigin="anonymous">
     <link rel="apple-touch-icon" href="icon.png">
+    <link rel="shortcut icon" href="https://assets.rtcsnv.net/wp-content/uploads/sites/6/2019/04/09171650/favicon.png" type="image/x-icon">
     <!-- Place favicon.ico in the root directory -->
 
     <link rel="stylesheet" href="css/normalize.css">
@@ -18,14 +19,30 @@
 
   <body>
     <div class="nav-overlay">
-      <div class="logo"></div>
+      <div class="topbox">
+        <div id="top_logo" class="logo"></div>
+        <div class="mnav">
+          <a href="#" id="mnav_hamburger">
+            <i class="fas fa-bars"></i>
+          </a>
+        </div>
+      </div>
       <div class="nav">
-        <ul>
-          <li>Project Recap</li>
-          <li>Early Action Items</li>
-          <li>Phase 1: Complete Streets</li>
-          <li>Phase 2: Ultimate</li>
-          <li>Leave Feedback</li>
+        <ul id="lownav">
+          <li><a href="#sect1">Project Recap</a></li>
+          <li><a href="#sect2">Early Action Items</a></li>
+          <li><a href="#sect3">Phase 1: Complete Streets</a></li>
+          <li><a href="#sect4">Phase 2: Ultimate</a></li>
+          <li><a href="#sect5">Leave Feedback</a></li>
+        </ul>
+      </div>
+      <div id="mnav_overlay" class="mnav_overlay">
+        <ul id="fullnav">
+          <li><a href="#sect1">Project Recap</a></li>
+          <li><a href="#sect2">Early Action Items</a></li>
+          <li><a href="#sect3">Phase 1: Complete Streets</a></li>
+          <li><a href="#sect4">Phase 2: Ultimate</a></li>
+          <li><a href="#sect5">Leave Feedback</a></li>
         </ul>
       </div>
     </div>
@@ -35,9 +52,9 @@
       <div class="marquee">
         <h1>You reimagined<br>Boulder Highway</h1>
         <h3>Let us know what you think</h3>
-        <div class="ctabox">
-          <button class="btn feedback">Leave Feedback</button>
-          <button class="btn lernmoar">Learn More</button>
+        <div id="ctabox" class="ctabox">
+          <a href="#sect5"><button class="btn feedback">Leave Feedback</button></a>
+          <a href="#sect1"><button class="btn lernmoar">Learn More</button></a>
         </div>
       </div>
       <div id="sect1" class="section sect1">
@@ -57,6 +74,21 @@
           <div id="opt-dct" class="highlights option-dct" data-highlight="dct"></div>
           <div id="opt-als" class="highlights option-als" data-highlight="als"></div>
           <div id="opt-lps" class="highlights option-lps" data-highlight="lps"></div>
+          <!-- Details -->
+          <div id="crt" class="details">
+            <p>Center-Running Transit</p><img src="./assets/images/crt.png"></div>
+          <div id="sws" class="details">
+            <p>Sidewalks</p><img src="./assets/images/sws.png"></div>
+          <div id="mbc" class="details">
+            <p>Mid-Block Crossings</p><img src="./assets/images/mbc.png"></div>
+          <div id="stl" class="details">
+            <p>Street Lighting</p><img src="./assets/images/stl.png"></div>
+          <div id="dct" class="details">
+            <p>Dual Cycle Tracks</p><img src="./assets/images/dct.png"></div>
+          <div id="als" class="details">
+            <p>Access Lanes</p><img src="./assets/images/als.png"></div>
+          <div id="lps" class="details">
+            <p>Linear Parks</p><img src="./assets/images/lps.png"></div>
         </div>
       </div>
       <div id="sect2" class="section sect2">
@@ -67,7 +99,24 @@
           </div>
           <p>The first phase of implementation includes those items that can be installed relatively quickly and at low cost, but create a large safety and mobility benefit for the corridor.</p>
         </div>
-        <div class="demo"></div>
+        <div class="demo">
+          <div id="opt-tmp" class="highlights option-tmp" data-highlight="tmp"></div>
+          <div id="opt-ils" class="highlights option-ils" data-highlight="ils"></div>
+          <div id="opt-mml" class="highlights option-mml" data-highlight="mml"></div>
+          <!-- DETAILS -->
+          <div id="tmp" class="details alt">
+            <p><strong>Temporary Installations</strong><br>Striping, fencing and other temporary materials to begin building out the concept</p>
+            <img src="./assets/images/tmp.png">
+          </div>
+          <div id="ils" class="details alt">
+            <p><strong>Improved Lighting</strong><br>Enhanced street and pedestrian lighting for improved visibility</p>
+            <img src="./assets/images/stl.png">
+          </div>
+          <div id="mml" class="details alt">
+            <p><strong>Multi-Modal Lane</strong><br>Exclusive lanes for transit, bicycles and right-turning traffic</p>
+            <img src="./assets/images/mml.png">
+          </div>
+        </div>
       </div>
       <div id="sect3" class="section sect3">
         <div class="sect_text">
@@ -77,7 +126,34 @@
           </div>
           <p>In the <strong>Complete Streets</strong> phase, sidewalks are widened, jurisdictions determine whether the pedestrian area will include linear parks or a low-speed access lane, and improved lighting in updated areas is added.</p>
         </div>
-        <div class="demo"></div>
+        <div class="demo">
+          <div id="opt-il2" class="highlights option-il2" data-highlight="il2"></div>
+          <div id="opt-lnp" class="highlights option-lnp" data-highlight="lnp"></div>
+          <div id="opt-sdw" class="highlights option-sdw" data-highlight="sdw"></div>
+          <div id="opt-mbx" class="highlights option-mbx" data-highlight="mbx"></div>
+          <div id="opt-axl" class="highlights option-axl" data-highlight="axl"></div>
+          <!-- DETAILS -->
+          <div id="il2" class="details alt">
+            <p><strong>Improved Lighting</strong><br>Enhanced street and pedestrian lighting for improved visibility</p>
+            <img src="./assets/images/stl.png">
+          </div>
+          <div id="lnp" class="details alt">
+            <p><strong>Linear Park</strong><br>Open space greenways that act as buffers between the mainline roadway and the biking and pedestrian spaces.</p>
+            <img src="./assets/images/stl.png">
+          </div>
+          <div id="sdw" class="details alt">
+            <p><strong>Sidewalks</strong><br>Widen sidewalks to increase pedestrian access and improve comfort and safety</p>
+            <img src="./assets/images/sws.png">
+          </div>
+          <div id="mbx" class="details alt">
+            <p><strong>Mid-Block Crossings</strong><br>Increased number of pedestrian crossings that include flashers, median refuge areas and convenient spacing.</p>
+            <img src="./assets/images/mbc.png">
+          </div>
+          <div id="axl" class="details alt">
+            <p><strong>Access Lanes</strong><br>Low-speed business access lanes to driveways and businesses separated from mainline traffic.</p>
+            <img src="./assets/images/als.png">
+          </div>
+        </div>
       </div>
       <div id="sect4" class="section sect4">
         <div class="sect_text">
@@ -87,7 +163,29 @@
           </div>
           <p>This is the final phase of the concept, bringing the vision to completion.</p>
         </div>
-        <div class="demo"></div>
+        <div class="demo">
+          <div id="opt-dcy" class="highlights option-dcy" data-highlight="dcy"></div>
+          <div id="opt-lip" class="highlights option-lip" data-highlight="lip"></div>
+          <div id="opt-crb" class="highlights option-crb" data-highlight="crb"></div>
+          <div id="opt-acc" class="highlights option-acc" data-highlight="acc"></div>
+          <!-- DETAILS -->
+          <div id="dcy" class="details alt">
+            <p><strong>Dual Cycle Tracks</strong><br>Multi-directional cycle tracks on each side of the roadway providing improved access for cyclists along the length of the roadway.</p>
+            <img src="./assets/images/dct.png">
+          </div>
+          <div id="lip" class="details alt">
+            <p><strong>Linear Park</strong><br>Open space greenways that act as buffers between the mainline roadway and the biking and pedestrian spaces.</p>
+            <img src="./assets/images/lps.png">
+          </div>
+          <div id="crb" class="details alt">
+            <p><strong>Center-Running Transit</strong><br>Dedicated transit lanes and stops are moved to the center of the roadway to improve pedestrian access.</p>
+            <img src="./assets/images/crt.png">
+          </div>
+          <div id="acc" class="details alt">
+            <p><strong>Access Lanes</strong><br>Low-speed business access lanes to driveways and businesses separated from mainline traffic.</p>
+            <img src="./assets/images/als.png">
+          </div>
+        </div>
       </div>
       <div id="sect5" class="section sect5">
         <div class="sect_text">
@@ -178,7 +276,21 @@
         </div>
       </div>
       <div class="section footer">
-
+        <div class="footbox">
+          <div class="logo">
+            <img src="./assets/images/reimagine-logo.png">
+          </div>
+          <div class="logoset">
+            <img src="./assets/images/Logo_RTC.png">
+            <img src="./assets/images/Logo_NDot.png">
+            <img src="./assets/images/Logo_CityOfHendo.png">
+            <img src="./assets/images/Logo_ClarkCounty.png">
+            <img src="./assets/images/Logo_CityOfLasVegas.png">
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2019 Regional Transportation Commission of Southern Nevada | <a href="">Privacy Policy</a></p>
+        </div>
       </div>
     </div>
 
@@ -191,7 +303,7 @@
     </script>
 
     <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/app.min.js"></script>
 
   </body>
 

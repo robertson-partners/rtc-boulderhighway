@@ -2,7 +2,6 @@ body {
   font-family: $global-font-family;
   height: 100%;
   width: 100%;
-  position: absolute;
 }
 
 h1 {
@@ -11,6 +10,9 @@ h1 {
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 10px;
+  @media screen and (max-width: $break-medium) {
+    font-size: 9vw;
+  }
 }
 
 h2 {
@@ -40,7 +42,6 @@ p {
 .main {
   display: block;
   position: relative;
-  overflow: auto;
   height: 100%;
   width: 100%;
 }
@@ -58,5 +59,9 @@ p {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+    @media screen and (max-width: $break-medium) {
+      width: 90%;
+    }
   }
 }

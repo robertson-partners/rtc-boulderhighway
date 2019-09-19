@@ -1,0 +1,129 @@
+.details {
+  display: none;
+  position: absolute;
+  z-index: 20;
+  background: #fff;
+  border: 7px solid $rtcblue;
+  border-radius: 25px;
+  padding: 6px;
+  max-width: 114px;
+  text-align: center;
+  p {
+    margin: 0 0 5px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: center;
+    color: $rtcblue;
+  }
+  &.alt {
+    max-width: 250px;
+  }
+}
+
+
+/* PROJECT RECAP */
+
+#crt {
+  top: 10%;
+  left: 47%;
+}
+
+#sws {
+  top: 21%;
+  left: 21%;
+}
+
+#mbc {
+  top: 22%;
+  left: 65%;
+}
+
+#stl {
+  top: 47%;
+  left: 67%;
+}
+
+#dct {
+  top: 57%;
+  left: 32%;
+}
+
+#als {
+  top: 39%;
+  left: 32%;
+}
+
+#lps {
+  top: 72%;
+  left: 43.5%;
+}
+
+
+/* EARLY ACTION ITEMS */
+
+#tmp {
+  top: 39%;
+  left: 37.5%;
+}
+
+#ils {
+  top: 58%;
+  left: 23.5%;
+}
+
+#mml {
+  top: 70%;
+  left: 48.5%;
+}
+
+
+/* PHASE 1 */
+
+#il2 {
+  top: 10%;
+  left: 44%;
+}
+
+#lnp {
+  top: 11%;
+  left: 13%;
+}
+
+#sdw {
+  top: 50%;
+  left: 58%;
+}
+
+#mbx {
+  top: 50%;
+  left: 22%;
+}
+
+#axl {
+  top: 62%;
+  left: 42.5%;
+}
+
+
+/* PHASE 2 */
+
+#dcy {
+  top: 18%;
+  left: 34%;
+}
+
+#lip {
+  top: 61%;
+  left: 33%;
+}
+
+#crb {
+  top: 30%;
+  left: 40%;
+}
+
+#acc {
+  top: 47%;
+  left: 57%;
+}
