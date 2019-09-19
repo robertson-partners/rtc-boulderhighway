@@ -558,6 +558,9 @@ p {
   .highlights.option-mml {
     top: 85%;
     left: 72%; }
+  .highlights.option-xsl {
+    top: 43%;
+    left: 34%; }
   .highlights.option-il2 {
     top: 30%;
     left: 63%; }
@@ -686,6 +689,10 @@ p {
   top: 70%;
   left: 48.5%; }
 
+#xsl {
+  top: 48%;
+  left: 31%; }
+
 /* PHASE 1 */
 #il2 {
   top: 10%;
@@ -772,9 +779,9 @@ p {
 #_form_1_ input[type="text"],
 #_form_1_ input[type="date"],
 #_form_1_ textarea {
-  padding: 6px;
+  padding: 6px 10px;
   color: #000 !important;
-  font-size: 13px;
+  font-size: 20px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   height: 50px;
