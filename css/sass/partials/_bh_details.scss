@@ -11,13 +11,25 @@
   p {
     margin: 0 0 5px;
     font-size: 16px;
-    font-weight: 700;
-    line-height: 18px;
+    font-weight: 500;
+    line-height: 20px;
     text-align: center;
     color: $rtcblue;
   }
   &.alt {
     max-width: 250px;
+  }
+  .moredetails {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    p {
+      width: 65%;
+      text-align: left;
+    }
+    img {
+      height: fit-content;
+    }
   }
 }
 
@@ -63,8 +75,8 @@
 /* EARLY ACTION ITEMS */
 
 #tmp {
-  top: 39%;
-  left: 37.5%;
+  top: 38%;
+  left: 45.5%;
 }
 
 #ils {
@@ -86,13 +98,13 @@
 /* PHASE 1 */
 
 #il2 {
-  top: 10%;
-  left: 44%;
+  top: 15%;
+  left: 46%;
 }
 
 #lnp {
-  top: 11%;
-  left: 13%;
+  top: 12%;
+  left: 14%;
 }
 
 #sdw {
@@ -124,8 +136,8 @@
 }
 
 #crb {
-  top: 30%;
-  left: 40%;
+  top: 28%;
+  left: 49%;
 }
 
 #acc {

@@ -640,12 +640,31 @@ p {
   .details p {
     margin: 0 0 5px;
     font-size: 16px;
-    font-weight: 700;
-    line-height: 18px;
+    font-weight: 500;
+    line-height: 20px;
     text-align: center;
     color: #1D427F; }
   .details.alt {
     max-width: 250px; }
+  .details .moredetails {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .details .moredetails p {
+      width: 65%;
+      text-align: left; }
+    .details .moredetails img {
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content; }
 
 /* PROJECT RECAP */
 #crt {
@@ -678,8 +697,8 @@ p {
 
 /* EARLY ACTION ITEMS */
 #tmp {
-  top: 39%;
-  left: 37.5%; }
+  top: 38%;
+  left: 45.5%; }
 
 #ils {
   top: 58%;
@@ -695,12 +714,12 @@ p {
 
 /* PHASE 1 */
 #il2 {
-  top: 10%;
-  left: 44%; }
+  top: 15%;
+  left: 46%; }
 
 #lnp {
-  top: 11%;
-  left: 13%; }
+  top: 12%;
+  left: 14%; }
 
 #sdw {
   top: 50%;
@@ -724,8 +743,8 @@ p {
   left: 33%; }
 
 #crb {
-  top: 30%;
-  left: 40%; }
+  top: 28%;
+  left: 49%; }
 
 #acc {
   top: 47%;
