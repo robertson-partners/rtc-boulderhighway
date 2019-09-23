@@ -1096,13 +1096,13 @@ p {
   position: relative;
   text-align: left;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 20px 20px 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   *zoom: 1;
-  background: #fff !important;
+  background: #F4F4F4 !important;
   border: 0px solid #b0b0b0 !important;
-  border-radius: 0px !important;
+  border-radius: 10px !important;
   color: #000 !important; }
 
 #_form_1_ ._form-title {
